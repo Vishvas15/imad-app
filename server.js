@@ -13,11 +13,11 @@ app.get('/artical-one',function (req, res) {
 });
 
 app.get('/artical-two',function (req, res) {
-  res.send('artical 2 requested');
+  res.sendFile(path.join(__dirname, 'ui', 'artical-two.html'));
 });
 
 app.get('/artical-three',function (req, res) {
-  res.send('artical 3 requested');
+  res.sendFile(path.join(__dirname, 'ui', 'artical-three.html'));
 });
 
 app.get('/ui/style.css',function (req, res) {
