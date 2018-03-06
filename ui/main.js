@@ -1,5 +1,5 @@
 console.log('Loaded!');
-var img=document.getElamentById('img');
+var img=document.getElamentById('madi');
 img.onclick=function()
 {
     img.style.marginLeft='100px';
