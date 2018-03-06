@@ -5,11 +5,67 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articalOne={
+    title:'artical-one',
+    heading:'artical one',
+    date:'15 march,2018',
+    content:`
+            <p>
+                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.
+            </p>
+            <p>
+                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.
+            </p>
+            <p>
+                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.
+            </p>`
+}
+
+function createTemplate(data){
+    var title=data.title;
+    var heading=data.heading;
+    var date=data.date;
+    var content=data.content;
+var htmlTemplate=`
+<html>
+    <head>
+        <title>
+            ${title}
+        </title>
+    </head>
+    <body>
+        <div>
+            <a href="/">Home</a>
+        </div>
+        <hr/>
+        <h3>
+            ${heading}
+        </h3>
+        <div>
+            ${date}
+        </div>
+        <div>
+            ${content}
+        </div>
+    </body>
+</html>`;
+return htmltemplate;
+}
+    
+
+
+
+
+
+
+
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/artical-one',function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'artical-one.html'));
+  res.send(createTemplate(articalOne));
 });
 
 app.get('/artical-two',function (req, res) {
