@@ -78,4 +78,3 @@ submit.onclick = function(){
     request.open('GET','http://vishwasmangroliya15.imad.hasura-app.io/counter',true);
     request.send(null);
 };
-}
