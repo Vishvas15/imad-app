@@ -95,14 +95,6 @@ app.get('/:articalName',function (req, res) {
   res.send(createTemplate(articals[articalName]));
 });
 
-/*app.get('/artical-two',function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'artical-two.html'));
-});
-
-app.get('/artical-three',function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'artical-three.html'));
-});*/
-
 var counter=0;
 app.get('/counter',function (req, res) {
   counter=counter+1;
