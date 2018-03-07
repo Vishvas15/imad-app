@@ -5,8 +5,8 @@ var element = document.getElementById('main-text');
 element.innerHTML='new';
 
 
-
-/*var img=document.getElamentById('madi');
+//move image
+var img= document.getElementById('madi');
 var marginLeft=0;
 function moveRight()
 {
@@ -17,4 +17,4 @@ img.onclick=function()
 {
     var interval=setInterval(moveRight,100);
     //img.style.marginLeft='100px';
-};*/
+};
