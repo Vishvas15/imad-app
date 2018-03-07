@@ -90,7 +90,7 @@ function createTemplate (data) {
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/articalNmae',function (req, res) {
+app.get('/:articalName',function (req, res) {
     var articalName = req.params.articalName;
   res.send(createTemplate(articals[articalName]));
 });
