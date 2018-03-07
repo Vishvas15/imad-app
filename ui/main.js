@@ -46,7 +46,7 @@ button.onclick = function(){
 
 
 //submit-name
-var submit = document.grtElementById('submit_btn');
+var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     
     
