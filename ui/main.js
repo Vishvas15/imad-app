@@ -38,8 +38,10 @@ button.onclick = function(){
         }
         //not done yet
     };
- 
- 
+    
+    //make the request
+    request.open('GET','http://vishwasmangroliya15.imad.hasura-app.io/counter',true);
+    request.send(null);
  
     
-}
+};
