@@ -1,5 +1,12 @@
 console.log('Loaded!');
-var img=document.getElamentById('madi');
+
+//change text
+var element = getElementById ('main-text');
+element.innerHTML='new';
+
+
+
+/*var img=document.getElamentById('madi');
 var marginLeft=0;
 function moveRight()
 {
@@ -10,4 +17,4 @@ img.onclick=function()
 {
     var interval=setInterval(moveRight,100);
     //img.style.marginLeft='100px';
-};
+};*/
