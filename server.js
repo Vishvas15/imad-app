@@ -5,10 +5,11 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articalOne = {
+var articals={
+    'artical-one' : {
     title:'artical-one',
     heading:'artical one',
-    date:'15 march,2018',
+    date:'1 march,2018',
     content:`
             <p>
                 This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.
@@ -19,6 +20,37 @@ var articalOne = {
             <p>
                 This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.
             </p>`
+    },
+    'artical-two' : {
+    title:'artical-two',
+    heading:'artical two',
+    date:'2 march,2018',
+    content:`
+            <p>
+                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.
+            </p>
+            <p>
+                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.
+            </p>
+            <p>
+                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.
+            </p>`
+    },
+    'artical-three' : {
+    title:'artical-three',
+    heading:'artical three',
+    date:'3 march,2018',
+    content:`
+            <p>
+                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.
+            </p>
+            <p>
+                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.
+            </p>
+            <p>
+                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.
+            </p>`
+    },
 };
 
 function createTemplate (data) {
@@ -58,8 +90,9 @@ function createTemplate (data) {
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/artical-one',function (req, res) {
-  res.send(createTemplate(articalOne));
+app.get('/articalNmae',function (req, res) {
+    var articalName = req.params.articalName;
+  res.send(createTemplate(articals[articalName]));
 });
 
 app.get('/artical-two',function (req, res) {
