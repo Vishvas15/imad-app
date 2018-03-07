@@ -50,7 +50,7 @@ var articals={
             <p>
                 This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.
             </p>`
-    },
+    }
 };
 
 function createTemplate (data) {
